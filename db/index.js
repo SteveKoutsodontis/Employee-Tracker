@@ -13,7 +13,15 @@ class DB {
       // id, first_name, last_name FROM employee TABLE AND department name from department TABLE AND SELECT salary FROM role TABLE
       // YOUR NEED TO USE LEFT JOINS TO JOIN THREE TABLES
       // TODO: YOUR CODE HERE
-
+      "SELECT e.id, e.first_name Emp_First,e.last_name Emp-Last,\
+      m.id Mgr_ID, m.first_name Mgr_First,m.last_name Mgr_Last,\
+      department.name AS DeptName, \
+      role.title, role.salary \
+      FROM employee e\
+      LEFT JOIN employee m ON m.id = e.manager_id \
+      LEFT JOIN role \
+      ON e.role_id=role.id\
+      ON role.department_id = department.id"
     );
   }
 
@@ -35,7 +43,8 @@ class DB {
   updateEmployeeRole(employeeId, roleId) {
     return this.connection.query(
       // TODO: YOUR CODE HERE
-
+      "UPDATE employee SET role_id = ? WHERE id = ?",
+      [roleId, employeeId]
     );
   }
 
@@ -54,7 +63,7 @@ class DB {
       // id, title, salary FROM role TABLE AND department name FROM department TABLE
       // YOU NEED TO USE LEFT JOIN TO JOIN role and department TABLES
       // TODO: YOUR CODE HERE
-
+      "SELECT role.id, role.title as role_title, role.salary, department.name as dept_name FROM role left JOIN department ON role.department_id=department.id"
     );
   }
 
@@ -62,8 +71,8 @@ class DB {
   createRole(role) {
     return this.connection.query(
       // TODO: YOUR CODE HERE
-
-      );
+      "INSERT INTO role SET ?", role
+    );
   }
 
 
@@ -81,6 +90,7 @@ class DB {
   createDepartment(department) {
     return this.connection.query(
       // TODO: YOUR CODE HERE
+      "INSERT INTO department SET ?", department
     );
   }
 
