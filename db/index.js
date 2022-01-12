@@ -13,15 +13,14 @@ class DB {
       // id, first_name, last_name FROM employee TABLE AND department name from department TABLE AND SELECT salary FROM role TABLE
       // YOUR NEED TO USE LEFT JOINS TO JOIN THREE TABLES
       // TODO: YOUR CODE HERE
-      "SELECT e.id, e.first_name Emp_First,e.last_name Emp-Last,\
+      "SELECT e.id, e.first_name AS Emp_First, e.last_name AS Emp_Last,\
       m.id Mgr_ID, m.first_name Mgr_First,m.last_name Mgr_Last,\
       department.name AS DeptName, \
       role.title, role.salary \
       FROM employee e\
       LEFT JOIN employee m ON m.id = e.manager_id \
-      LEFT JOIN role \
-      ON e.role_id=role.id\
-      ON role.department_id = department.id"
+      LEFT JOIN role ON e.role_id=role.id\
+      LEFT JOIN department ON role.department_id = department.id"
     );
   }
 

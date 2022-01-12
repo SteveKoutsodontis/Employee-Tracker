@@ -1,6 +1,6 @@
 # Employee-Tracker
 ## Author 
-- [@SteveKoutsodontis](https://github.com/SteveKoutsodontis)
+- [Steve Koutsodontis](https://github.com/SteveKoutsodontis)
 
 ## Description
 * 
@@ -15,13 +15,14 @@
 
 ## Built With 
 
+* Express
+* mysql
+* mysql2
 * HTML
-* CSS 
-* JavaScript
-* Node.JS
-* Express.JS
-* Fs 
-* Heroku
+* CSS
+* Javascript
+* node.js
+* inquirer
 
 
 ## Installation Instructions
@@ -39,11 +40,16 @@ Clone the Github project.
 To install packages dependencies in package.json, open a console in the correct directory and enter: npm i
 
 ## Usage 
-Click link to run application: [Deployed Employee Tracker]()
+
+To run this application type in console: node index
 
 ## Screen Shots
 
 ![Screenshot]()
+
+## Walkthrough Video Links
+
+
 
 ### License: 
  

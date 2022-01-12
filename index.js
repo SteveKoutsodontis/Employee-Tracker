@@ -219,7 +219,7 @@ async function addRole() {
       choices: departmentChoices
     }
   ]);
-
+  console.log(role)
   await db.createRole(role);
 
   console.log(`Added ${role.title} to the database`);
