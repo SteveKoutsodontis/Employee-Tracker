@@ -3,15 +3,9 @@
 - [Steve Koutsodontis](https://github.com/SteveKoutsodontis)
 
 ## Description
-* 
 
-* 
+* The Employee Tracker is an app built with node.js, inquirer and many more languages. Its used on the command line and allows users to manipulate the database for the users business. After typing in npm start into command line that use will be prompted to choose what actions that would like to take. There choices range from creating a new employee profile with department and salary information. Also the user will be able to update the status of that employee and assign them to a manager. This has been made for an ease of access for any business owner or manager.
 
-* 
-
-*  
-
-* 
 
 ## Built With 
 
@@ -45,11 +39,12 @@ To run this application type in console: node index
 
 ## Screen Shots
 
-![Screenshot]()
+![Screenshot](./images/EmpTrack1.png)
+![Screenshot](./images/EmpTrack2.png)
 
 ## Walkthrough Video Links
 
-
+![Video Tutorial Link](https://watch.screencastify.com/v/qttbaiu4bEuFHYFKn3Ez)
 
 ### License: 
  

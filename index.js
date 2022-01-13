@@ -123,7 +123,7 @@ async function viewEmployeesByDepartment() {
   const departments = await db.findAllDepartments();
 
   const departmentChoices = departments.map(({ id, name }) => ({
-    name,
+    name: name,
     value: id
 
   }));
@@ -149,9 +149,9 @@ async function updateEmployeeRole() {
   const employees = await db.findAllEmployees();
 
   const employeeChoices = employees.map(({ id, first_name, last_name }) => ({
-    value: id,
-    name: first_name + " " + last_name
-
+    name: first_name + " " + last_name,
+    value: id
+  
   }));
 
   const { employeeId } = await prompt([
@@ -281,8 +281,9 @@ async function addEmployee() {
   employee.role_id = roleId;
 
   const managerChoices = employees.map(({ id, first_name, last_name }) => ({
-    value: id,
-    name: first_name + " " + last_name
+    name: first_name + " " + last_name,
+    value: id
+   
 
   }));
   managerChoices.unshift({ name: "None", value: null });
@@ -295,6 +296,7 @@ async function addEmployee() {
   });
 
   employee.manager_id = managerId;
+  console.log(employee)
 
   await db.createEmployee(employee);
 
